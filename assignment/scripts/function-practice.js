@@ -36,11 +36,14 @@ console.log(multiplyThree(3))
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
-  if ( number > 0 ){
-    return;
+  if ( number > 0){
+
+    return true;
+    // returns negitive values 
   }
-    return;
+   else return false;
 }
+console.log(isPositive(2))
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
@@ -50,17 +53,50 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+
+let arrayTest = []
+let arrayTestFill = [1,2,3,4]
 function getLast( array ) {
-
+  console.log(array)
+return array[array.length -1]
 }
-
+//if the array is empty automatically returns undefined. works when values are present
+console.log('this is the last value of the arrray',getLast(arrayTest),' should be undefined')
+console.log('this is the last value of the arrray',getLast(arrayTestFill))
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+// function find( value, array ){
+//    if(array.includes(value)){
+//     return true }
+//    else {
+//     return false
+//    }
+//   }
+// found a method without loop that works 
+console.log(arrayTestFill, 'prove to me that 5 is not in here')
+function find( value, array){
+  for(let item of array){
+    if( array.indexOf(value)!== -1 ){
+      //looks to see if the value is in the array if it is not then the index value returned is -1 if true would return the index value of where the number is present
+      return true +' '+ value + ' is present in the array tested'
+    }
+    else {
+      return false +' '+ value + ' is not present in the array tested'
+    }
+    console.log(item,'item')
+    console.log(value,'value')
+    console.log(array,'array')
+    
+  }
 }
+console.log(find( 1,arrayTestFill),'first of 3 test console logs for find function') //true
+console.log(find(0,arrayTestFill)) //false
+console.log(find(5,arrayTestFill)) //false
+// console.log(find(7,arrayTestFill)) //false
+// console.log(find(2,arrayTestFill)) //true
 
+/*
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -88,3 +124,5 @@ function sumAll( ) {
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+*/
