@@ -158,5 +158,16 @@ function posArray( array, empty ){
 
 */
 
-console.log('test',Array.from(mixed))
+
+// https://edabit.com/challenge/3zAT89ZAxg4CAQqsZ
+// find the second largest number 
+
+let largenum = [ 2,4,6,8,10,3,15,-9]
+//expected return of 8 
+console.log(largenum.sort())
+function secLargest(array){
+ array.sort((a, b) => a- b)
+ console.log(array.sort((a, b) => a- b)) //found out sort is not good at sorting unless you push it through another funciton to order it properly. 
+ return array[array.length -2]           // used an arrow fuction am research more about how this is used. 
+}
 
