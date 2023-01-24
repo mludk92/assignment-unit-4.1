@@ -171,3 +171,5 @@ function secLargest(array){
  return array[array.length -2]           // used an arrow fuction am research more about how this is used. 
 }
 
+//funciton takes an array, sorts its in asending order, than gets the 2nd last index value of the sorted arrray 
+// gets 2nd last value by lenght -2 and sorts using sort function with arrow function to define order 
